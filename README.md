@@ -4,9 +4,7 @@ This repository contains my submission for the **Frontend Developer Intern Hirin
 
 ---
 
-## Overview  
-
-**CodeAnt AI** is a Y Combinator-backed startup transforming the code quality and security landscape by leveraging AI-driven and deterministic fixes. Trusted by leading unicorns and backed by top Silicon Valley investors, CodeAnt AI simplifies coding, making it cleaner, safer, and more efficient.  
+## Overview   
 
 This assignment involved building a frontend implementation of the provided Figma design using ReactJS, HTML, and CSS.  
 
@@ -22,7 +20,7 @@ This assignment involved building a frontend implementation of the provided Figm
 
 ## Figma Design Reference  
 
-The design provided for this assignment can be found [here](#).  
+The design provided for this assignment can be found [here](https://www.figma.com/design/3j3bEI8nR1T1UwsfEBMbhi/Frontend-Developer-%3C%3E-CodeAnt?node-id=1-6996&t=KDe4DUZN8aYmBkgn-0)  
 
 ---
 
@@ -35,23 +33,32 @@ Ensure you have the following installed on your system:
 - **A code editor** (e.g., VS Code)  
 
 ### Setup Instructions  
-1. Clone the repository:  
+1. Clone the repository:
+     
    ```bash  
-   git clone <repository-link>
+   git clone https://github.com/Ayansaxena24/CodeAntAi.git
    ```
-2. Navigate to the project directory
+   
+3. Navigate to the project directory
+   
    ```bash
    cd frontend-developer-assignment  
    ```
-3. Install dependencies:
+   
+5. Install dependencies:
+   
    ```bash
    npm install  
    ```
-4. Start the development server:
+   
+7. Start the development server:
+   
    ```bash
    npm start
    ```
-5. Open your browser and go to:
+   
+9. Open your browser and go to:
+    
    ```bash
    http://localhost:3000  
    ```
