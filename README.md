@@ -89,12 +89,12 @@ Leveraged CSS media queries and tested on different screen sizes to ensure compa
 
 ## Evaluation Criteria Checklist  
 
-- [x] **Code Quality**: Clean, readable, and maintainable code.  
-- [x] **Adherence to Design**: Figma design implemented accurately.  
-- [x] **Functionality**: Components are fully functional.  
-- [x] **Performance**: Optimized UI/UX.  
-- [x] **Responsiveness**: Design is responsive across devices.  
-- [x] **Timeliness**: Submitted before the deadline.  
+- ✅ **Code Quality**: Clean, readable, and maintainable code.  
+- ✅ **Adherence to Design**: Figma design implemented accurately.  
+- ✅ **Functionality**: Components are fully functional.  
+- ✅ **Performance**: Optimized UI/UX.  
+- ✅ **Responsiveness**: Design is responsive across devices.  
+- ✅ **Timeliness**: Submitted before the deadline.  
 
 ---
 
