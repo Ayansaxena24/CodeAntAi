@@ -2,6 +2,8 @@
 
 This repository contains my submission for the **Frontend Developer Intern Hiring Assignment** for **CodeAnt AI**. Below, I’ve outlined the project details, instructions for running the code, and my approach to completing the assignment.  
 
+This application is deployed on Vercel. You can check out the live link [here](https://code-ant-ai-lime.vercel.app/).
+
 ---
 
 ## Overview   
