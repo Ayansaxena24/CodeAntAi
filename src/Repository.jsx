@@ -408,7 +408,7 @@ const Repository = () => {
             textOverflow: "ellipsis"
           },
           width: {
-            sm: "90%", // Width on small screens
+            sm: "87%", // Width on small screens
           },
         }}
       />
@@ -482,7 +482,7 @@ const Repository = () => {
   }
 
   return (
-    <div className="w-[100vw] sm:w-[100vw] flex flex-col sm:flex-row font-inter">
+    <div className="w-[100vw] sm:w-full flex flex-col sm:flex-row font-inter">
       <div className="flex w-[100%] justify-between h-[64px] items-center sm:hidden border-b-[1px] border-[#E9EAEB]">
         <img src={repologo} className="w-[82.74%] h-[32px] ml-4" />
         <Button
