@@ -413,7 +413,7 @@ const Repository = () => {
         }}
       />
             </div>
-            <div className="flex flex-col h-[100%] 2xl:h-[92%] sm:justify-between mt-4 pb-4">
+            <div className="flex flex-col h-[100%] 2xl:h-[82%] sm:justify-between mt-4 pb-4">
               <div className="flex flex-col sm:w-[80%] xl:mr-8">
                 <CustomButton>
                   <>
