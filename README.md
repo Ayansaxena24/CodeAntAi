@@ -104,7 +104,7 @@ Leveraged CSS media queries and tested on different screen sizes to ensure compa
 ## **Tech Stack**
 
 - **Framework**: [React.js](https://react.dev/)
-- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/) and [Material UI](https://mui.com/)
 
 ---
 
