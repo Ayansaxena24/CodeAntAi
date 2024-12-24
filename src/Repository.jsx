@@ -24,7 +24,7 @@ import database from "./assets/database.png";
 import search from "./assets/search.png";
 import down from "./assets/down.png";
 import codeAntLogo from "./assets/codeAntLogo.png";
-import './index.css';
+import "./index.css";
 
 const Repository = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -70,6 +70,7 @@ const Repository = () => {
     },
   }));
 
+  // mock data
   const data = [
     {
       name: "design-system-1",
@@ -304,35 +305,36 @@ const Repository = () => {
     },
   ];
 
+  // if search text is empty, show all data
   useEffect(() => {
     handleSearch();
     if (filteredData.length === 0) setFilteredData(data);
-  }, [searchText])
+  }, [searchText]);
 
   const handleSearch = () => {
     const newData = data.filter((item) => item.name.includes(searchText));
     setFilteredData(newData);
-  }
+  };
 
+  // Sidebar
   const sideBar = () => {
     return (
-        <Box
+      <Box
         sx={{
-            width: {
-                xs: "100%",
-                sm: "100%", 
-              },
-              height:{
-                sm:"91vh",
-                md:"91vh"
-              },
+          width: {
+            xs: "100%",
+            sm: "100%",
+          },
+          height: {
+            sm: "91vh",
+            md: "91vh",
+          },
           padding: 2,
           display: "flex",
           flexDirection: "column",
-          justifyContent: 
-          {
-            xs:"space-between",
-            sm:"flex-start"
+          justifyContent: {
+            xs: "space-between",
+            sm: "flex-start",
           },
           alignItems: "center",
         }}
@@ -341,18 +343,24 @@ const Repository = () => {
         onKeyDown={toggleDrawer(false)}
       >
         <div className="flex justify-between sm:mr-10 pt-2">
-          <img src={repologo} className="w-[82.74%] h-[32px] ml-1 sm:ml-0 sm:mr-4 sm:hidden" />
-          <img src={codeAntLogo} className="w-[100%] h-[32px] ml-4 sm:ml-0 sm:mr-4 hidden sm:flex" />
+          <img
+            src={repologo}
+            className="w-[82.74%] h-[32px] ml-1 sm:ml-0 sm:mr-4 sm:hidden"
+          />
+          <img
+            src={codeAntLogo}
+            className="w-[100%] h-[32px] ml-4 sm:ml-0 sm:mr-4 hidden sm:flex"
+          />
           <div className="sm:hidden">
-          <Button
-            style={{ backgroundColor: "white" }}
-            onClick={toggleDrawer(true)}
-          >
-            <img src={close} className="ml-6" />
-          </Button>
+            <Button
+              style={{ backgroundColor: "white" }}
+              onClick={toggleDrawer(true)}
+            >
+              <img src={close} className="ml-6" />
+            </Button>
           </div>
         </div>
-        <Box style={{ width: "100%", height:'100%' }}>
+        <Box style={{ width: "100%", height: "100%" }}>
           <div className="h-[100%] mr-[10px]">
             <div className="flex mt-6 rounded-md py-2 sm:mr-8">
               {/* <TextField
@@ -380,38 +388,38 @@ const Repository = () => {
                   },
                 }}
               /> */}
-               <TextField
-        value="UtkarshDhairyaPanwar"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <img src={down} />
-            </InputAdornment>
-          ),
-          readOnly: true, // To mimic a static text display
-          style: {
-            fontSize: "16px",
-            fontWeight: "400", 
-            whiteSpace: "nowrap",
-            overflow: "hidden", 
-            textOverflow: "ellipsis", // Show ellipsis for truncated text
-          },
-        }}
-        variant="outlined"
-        fullWidth
-        sx={{
-          "& .MuiOutlinedInput-root": {
-            borderRadius: "12px", 
-          },
-          "& .MuiInputBase-input": {
-            overflow: "hidden",
-            textOverflow: "ellipsis"
-          },
-          width: {
-            sm: "87%", // Width on small screens
-          },
-        }}
-      />
+              <TextField
+                value="UtkarshDhairyaPanwar"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <img src={down} />
+                    </InputAdornment>
+                  ),
+                  readOnly: true, // To mimic a static text display
+                  style: {
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis", // Show ellipsis for truncated text
+                  },
+                }}
+                variant="outlined"
+                fullWidth
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "12px",
+                  },
+                  "& .MuiInputBase-input": {
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  },
+                  width: {
+                    sm: "87%", // Width on small screens
+                  },
+                }}
+              />
             </div>
             <div className="flex flex-col h-[97%] 2xl:h-[95%] sm:justify-between mt-4 pb-4">
               <div className="flex flex-col sm:w-[80%] xl:mr-8">
@@ -478,8 +486,8 @@ const Repository = () => {
           </div>
         </Box>
       </Box>
-    )
-  }
+    );
+  };
 
   return (
     <div className="w-[100vw] sm:w-full flex flex-col sm:flex-row font-inter">
@@ -492,131 +500,130 @@ const Repository = () => {
           <img src={menu} />
         </Button>
         <Drawer anchor="top" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-            {sideBar()}
+          {sideBar()}
         </Drawer>
       </div>
-      <div className=" hidden sm:flex sm:h-[100%] sm:fixed">
-        {sideBar()}
-      </div>
+      <div className=" hidden sm:flex sm:h-[100%] sm:fixed">{sideBar()}</div>
       <div className="h-[100vh] sm:bg-[#FAFAFA] sm:h-[100%] sm:ml-60 sm:w-[100%]">
         <div className="m-0 sm:m-8 bg-white rounded-xl">
-        {/* Top Box */}
-        <div className="px-4 w-[100%] sm:py-4 mt-1 sm:mt-0">
-          <div className="flex flex-col sm:flex-row gap-y-2 sm:w-[100%] sm:justify-between">
-            <div className="flex flex-col">
-              <p className="font-semibold text-[32px] text-[#181D27]">
-                Repositories
-              </p>
-              <p className="font-normal text-[14px] text-[#414651]">
-                {data.length} total repositories
-              </p>
-            </div>
-            <div className="flex gap-x-1 sm:items-center sm:gap-x-4">
-              <Button
-                variant="contained"
-                style={{
-                  textTransform: "none",
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  color: "#414651",
-                  backgroundColor: "white",
-                  border: "2px",
-                  borderRadius: "8px",
+          {/* Top Box */}
+          <div className="px-4 w-[100%] sm:py-4 mt-1 sm:mt-0">
+            <div className="flex flex-col sm:flex-row gap-y-2 sm:w-[100%] sm:justify-between">
+              <div className="flex flex-col">
+                <p className="font-semibold text-[32px] text-[#181D27]">
+                  Repositories
+                </p>
+                <p className="font-normal text-[14px] text-[#414651]">
+                  {data.length} total repositories
+                </p>
+              </div>
+              <div className="flex gap-x-1 sm:items-center sm:gap-x-4">
+                <Button
+                  variant="contained"
+                  style={{
+                    textTransform: "none",
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    color: "#414651",
+                    backgroundColor: "white",
+                    border: "2px",
+                    borderRadius: "8px",
                   }}
-                  sx= {{
+                  sx={{
                     height: {
-                        sm: "40px", // Height on small screens
-                      }
+                      sm: "40px", // Height on small screens
+                    },
                   }}
-              >
-                <>
-                  <img src={refresh} className="mr-2" />{" "}
-                  <p className="font-normal text-md text-[#414651]">
-                    Refresh All
-                  </p>
-                </>
-              </Button>
-              <Button
-                variant="contained"
-                style={{
-                  textTransform: "none",
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  color: "#414651",
-                  backgroundColor: "#1570EF",
-                  border: "2px",
-                  borderRadius: "8px",
+                >
+                  <>
+                    <img src={refresh} className="mr-2" />{" "}
+                    <p className="font-normal text-md text-[#414651]">
+                      Refresh All
+                    </p>
+                  </>
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{
+                    textTransform: "none",
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    color: "#414651",
+                    backgroundColor: "#1570EF",
+                    border: "2px",
+                    borderRadius: "8px",
+                  }}
+                  sx={{
+                    height: {
+                      sm: "40px", // Height on small screens
+                    },
+                  }}
+                >
+                  <>
+                    <img src={plus} className="mr-2" />{" "}
+                    <p className="font-normal text-md text-white">
+                      Add Repository
+                    </p>
+                  </>
+                </Button>
+              </div>
+            </div>
+            <div className="w-[100%] sm:w-[30%] mt-4 flex justify-start items-center">
+              <TextField
+                style={{ width: "90%" }}
+                placeholder="Search Repositories"
+                onChange={(e) => setSearchText(e.target.value)}
+                value={searchText}
+                sx={{
+                  "& input::placeholder": {
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    color: "#414651",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "12px",
+                    border: "1px solid #D5D7DA",
+                  },
                 }}
-                sx= {{
-                    height: {
-                        sm: "40px", // Height on small screens
-                      }
-                  }}
-              >
-                <>
-                  <img src={plus} className="mr-2" />{" "}
-                  <p className="font-normal text-md text-white">
-                    Add Repository
-                  </p>
-                </>
-              </Button>
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <img src={search} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
             </div>
           </div>
-          <div className="w-[100%] sm:w-[30%] mt-4 flex justify-start items-center">
-            <TextField
-              style={{ width: "90%" }}
-              placeholder="Search Repositories"
-              onChange={(e) => setSearchText(e.target.value)}
-              value={searchText}
-              sx={{
-                "& input::placeholder": {
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  color: "#414651",
-                },
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: "12px", 
-                  border: "1px solid #D5D7DA",
-                },
-              }}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <img src={search} />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </div>
-        </div>
 
-        {/* Bottom Box */}
-        <div className="flex-1 overflow-y-auto mt-4">
-          {filteredData.map((item) => (
-            <div className="flex flex-col border-t-2 py-4 px-4 gap-y-1 hover:bg-[#F5F5F5]">
-              <div className="flex gap-x-2">
-                <p className="font-medium sm:text-[18px] text-[20px] text-[#181D27]">
-                  {item.name}
-                </p>
-                <p className="border border-1 border-[#B2DDFF] bg-[#EFF8FF] rounded-2xl px-2 py-1 font-normal text-[14px] text-[#175CD3]">
-                  {item.visibility}
-                </p>
+          {/* Bottom Box */}
+          <div className="flex-1 overflow-y-auto mt-4">
+            {filteredData.map((item) => (
+              <div className="flex flex-col border-t-2 py-4 px-4 gap-y-1 hover:bg-[#F5F5F5]">
+                <div className="flex gap-x-2">
+                  <p className="font-medium sm:text-[18px] text-[20px] text-[#181D27]">
+                    {item.name}
+                  </p>
+                  <p className="border border-1 border-[#B2DDFF] bg-[#EFF8FF] rounded-2xl px-2 py-1 font-normal text-[14px] text-[#175CD3]">
+                    {item.visibility}
+                  </p>
+                </div>
+                <div className="flex gap-x-3">
+                  <p className="flex gap-x-1 justify-center items-center font-normal text-[14px] sm:text-[16px] text-[#181D27]">
+                    {item.lang}{" "}
+                    {<img src={circle} className="w-[8px] h-[8px]" />}
+                  </p>
+                  <p className="flex gap-x-1 justify-center items-center font-normal text-[14px] sm:text-[16px] text-[#181D27]">
+                    {<img src={database} className="w-[8px] h-[8px]" />}{" "}
+                    {item.size}
+                  </p>
+                  <p className="font-normal text-[14px] sm:text-[16px] text-[#181D27]">
+                    {item.lastUpdated}
+                  </p>
+                </div>
               </div>
-              <div className="flex gap-x-3">
-                <p className="flex gap-x-1 justify-center items-center font-normal text-[14px] sm:text-[16px] text-[#181D27]">
-                  {item.lang} {<img src={circle} className="w-[8px] h-[8px]" />}
-                </p>
-                <p className="flex gap-x-1 justify-center items-center font-normal text-[14px] sm:text-[16px] text-[#181D27]">
-                  {<img src={database} className="w-[8px] h-[8px]" />}{" "}
-                  {item.size}
-                </p>
-                <p className="font-normal text-[14px] sm:text-[16px] text-[#181D27]">
-                  {item.lastUpdated}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
