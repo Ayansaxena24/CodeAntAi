@@ -42,7 +42,7 @@ Ensure you have the following installed on your system:
 3. Navigate to the project directory
    
    ```bash
-   cd frontend-developer-assignment  
+   cd CodeAntAi
    ```
    
 5. Install dependencies:
@@ -54,7 +54,7 @@ Ensure you have the following installed on your system:
 7. Start the development server:
    
    ```bash
-   npm start
+   npm run dev
    ```
    
 9. Open your browser and go to:
@@ -62,6 +62,7 @@ Ensure you have the following installed on your system:
    ```bash
    http://localhost:3000  
    ```
+   or http://localhost:5173 in some cases
 
 ## Features and Highlights  
 
@@ -98,7 +99,11 @@ Leveraged CSS media queries and tested on different screen sizes to ensure compa
 
 ---
 
-## Additional Notes  
+## **Tech Stack**
 
-- This project was developed using **ReactJS** for building the user interface, **CSS** for styling, and **HTML** for structuring content.  
+- **Framework**: [React.js](https://react.dev/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+
+---
+
 - If you encounter any issues while running the project, feel free to reach out.  
