@@ -319,8 +319,8 @@ const Repository = () => {
         <Box
         sx={{
             width: {
-                xs: "100%", // Full width on extra small screens
-                sm: "100%", // 16.80% width on small screens
+                xs: "100%",
+                sm: "100%", 
               },
               height:{
                 sm:"91vh",
@@ -391,9 +391,9 @@ const Repository = () => {
           readOnly: true, // To mimic a static text display
           style: {
             fontSize: "16px",
-            fontWeight: "400", // Equivalent to "font-normal"
-            whiteSpace: "nowrap", // Prevent text wrapping
-            overflow: "hidden", // Hide overflow content
+            fontWeight: "400", 
+            whiteSpace: "nowrap",
+            overflow: "hidden", 
             textOverflow: "ellipsis", // Show ellipsis for truncated text
           },
         }}
@@ -401,7 +401,7 @@ const Repository = () => {
         fullWidth
         sx={{
           "& .MuiOutlinedInput-root": {
-            borderRadius: "12px", // Optional, customize as needed
+            borderRadius: "12px", 
           },
           "& .MuiInputBase-input": {
             overflow: "hidden",
@@ -413,7 +413,7 @@ const Repository = () => {
         }}
       />
             </div>
-            <div className="flex flex-col h-[100%] 2xl:h-[94%] sm:justify-between mt-4 pb-4">
+            <div className="flex flex-col h-[100%] 2xl:h-[92%] sm:justify-between mt-4 pb-4">
               <div className="flex flex-col sm:w-[80%] xl:mr-8">
                 <CustomButton>
                   <>
